@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class Run {
 
     @Test
-    public void run(){
+    public void run() {
 
         Observer sub1 = new Subscribers("123", "Po", "1");
         Observer sub2 = new Subscribers("345", "Jo", "2");

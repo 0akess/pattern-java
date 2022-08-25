@@ -14,18 +14,6 @@ public class Subscribers implements Observer {
         this.phone = phone;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
     @Override
     public void handleEvent(List<String> messages) {
 
