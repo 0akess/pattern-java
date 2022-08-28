@@ -13,8 +13,10 @@ public class Run {
 
         sub = new Cheese(sub, 12);
         sub = new ChickenSteak(sub, 2);
-        sub = new Olives(sub, .3);
-        sub = new Cheese(sub, 3);
+        sub = new Olives(sub, .4);
+        sub = new Cheese(sub, 4);
+        sub = new ChickenSteak(sub, 2);
+        sub = new Olives(sub, .2);
 
         System.out.println(sub.cost());
         System.out.println(sub.getDescription());
