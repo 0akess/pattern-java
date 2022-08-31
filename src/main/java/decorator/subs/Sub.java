@@ -1,4 +1,4 @@
-package decorator;
+package decorator.subs;
 
 public abstract class Sub {
 

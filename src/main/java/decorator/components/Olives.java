@@ -1,6 +1,6 @@
 package decorator.components;
 
-import decorator.Sub;
+import decorator.subs.Sub;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -27,19 +27,11 @@ public class Olives extends ComponentsDecorator {
 
     @Override
     public String getDescription() {
-        if (price == .0) {
-            return sub.getDescription() + "\n*** оливки ***";
-        } else {
-            return sub.getDescription() + "\n*** оливки цена: " + price + " ***";
-        }
+        return sub.getDescription() + "\n*** оливки цена: " + price + " ***";
     }
 
     @Override
     public double cost() {
-        if (price == .0) {
-            return sub.cost();
-        } else {
-            return sub.cost() + price;
-        }
+        return sub.cost() + price;
     }
 }

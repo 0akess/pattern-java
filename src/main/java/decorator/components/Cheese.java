@@ -1,18 +1,25 @@
 package decorator.components;
 
-import decorator.Sub;
+import decorator.subs.Sub;
 
 public class Cheese extends ComponentsDecorator {
 
     private Sub sub;
     private double price;
+    private static int canUse = 6;
 
     public Cheese(Sub sub, int countCheese) {
         this.sub = sub;
 
-        if (countCheese >= 1 && countCheese <= 2) {
-        } else if (countCheese > 2) {
-            this.price = (countCheese - 2) * 20;
+        if (countCheese > 0) {
+            if (countCheese <= canUse && canUse > 0) {
+                canUse -= countCheese;
+            } else if (countCheese >= canUse && canUse > 0) {
+                this.price = (countCheese - canUse) * 20;
+                canUse -= countCheese;
+            } else if (canUse <= 0) {
+                this.price = countCheese * 20;
+            }
         } else {
             throw new NullPointerException("Укажите количество сыра больше 0");
         }
